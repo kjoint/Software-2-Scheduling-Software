@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="662.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <Label layoutX="6.0" layoutY="1.0" prefHeight="30.0" prefWidth="343.0" text="Scheduling Management System">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutY="31.0" prefHeight="628.0" prefWidth="1035.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="150.0" text="Customer">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="129.0" layoutY="19.0" mnemonicParsing="false" onAction="#onActionContactReport" prefHeight="25.0" prefWidth="183.0" text="Contact Appointment Report" />
+            <TableView fx:id="customerTable" layoutX="14.0" layoutY="55.0" prefHeight="467.0" prefWidth="837.0">
+              <columns>
+                <TableColumn fx:id="customerID" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="customerName" prefWidth="139.0" text="Customer Name" />
+                  <TableColumn fx:id="customerCountry" prefWidth="82.0" text="Country" />
+                  <TableColumn fx:id="customerState" prefWidth="109.0" text="Region/State" />
+                  <TableColumn fx:id="customerAddress" prefWidth="153.0" text="Address" />
+                  <TableColumn fx:id="customerPostalCode" prefWidth="132.0" text="Postal Code" />
+                  <TableColumn fx:id="customerPhoneNumber" prefWidth="144.0" text="Phone Number" />
+              </columns>
+            </TableView>
+            <Button layoutX="527.0" layoutY="557.0" mnemonicParsing="false" onAction="#onActionUpdate" prefHeight="25.0" prefWidth="159.0" text="Update Selected Customer" />
+            <Button layoutX="908.0" layoutY="55.0" mnemonicParsing="false" onAction="#onActionAddCustomer" text="Add Customer" />
+            <Button layoutX="370.0" layoutY="557.0" mnemonicParsing="false" onAction="#onActionSchedule" text="Schedule Appointment" />
+            <Button layoutX="699.0" layoutY="557.0" mnemonicParsing="false" onAction="#onActionDelete" text="Delete selected Customer" />
+            <Button layoutX="344.0" layoutY="19.0" mnemonicParsing="false" onAction="#onActionTypeReport" prefHeight="25.0" prefWidth="214.0" text="Appointment Type Count Report" />
+            <Button layoutX="587.0" layoutY="19.0" mnemonicParsing="false" onAction="#onActionCustomerReport" prefHeight="25.0" prefWidth="183.0" text="Customer Report" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
